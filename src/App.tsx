@@ -12,19 +12,22 @@ function App() {
 
   const [balloons, setBalloons] = createSignal<Balloon[]>([])
   const onClick = () => {
-    alert('x')
     setBalloons([...balloons(), {
       color: '#f00',
       x: 0,
-      y: 0
+      y: 20
     }])
   }
   const loop = () => {
-    setBalloons(balloons().map(balloon => {
-      balloon.y += 10
-      return balloon
-    }))
-    requestAnimationFrame(loop)
+    try {
+      setBalloons(balloons().map(balloon => {
+        balloon.y += 10
+        return balloon
+      }))
+      requestAnimationFrame(loop)
+    } catch (error) {
+      alert(error)
+    }
   }
   loop()
   
