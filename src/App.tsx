@@ -16,8 +16,8 @@ function App() {
       color: '#f00'
     }])
   }
-  const loop =  () => {
-    requestAnimationFlame(loop)
+  const loop = () => {
+    requestAnimationFrame(loop)
   }
   loop()
   
