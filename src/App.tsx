@@ -13,7 +13,7 @@ function App() {
           <div>{ targetName }!!</div>
         </div>
       </div>
-      <div class="fixed bottom-0 mx-10">
+      <div class="fixed bottom-0 mx-10 w-screen">
         <div class="text-xl text-center">By Shotaro Nakamura</div>
       </div>
     </div>
