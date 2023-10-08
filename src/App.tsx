@@ -18,6 +18,10 @@ function App() {
     }])
   }
   const loop = () => {
+    setBalloons(balloons().map(balloon => {
+      balloon.y += 10
+      return balloon
+    }))
     requestAnimationFrame(loop)
   }
   loop()
@@ -26,7 +30,12 @@ function App() {
     <div>
       <div>
         <For each={balloons()}>{(balloon) => 
-          <div>x</div>    
+          <div class="fixed" style={{
+            'top': balloon.y,
+            'left': ballon.x,
+          }}>
+            s
+          </div>
         }</For>
       </div>
       <div class="bg-gradient-to-r from-red-500 to-indigo-500 w-screen h-screen">
