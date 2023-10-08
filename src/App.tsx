@@ -8,9 +8,11 @@ function App() {
   return (
     <div>
       <div class="bg-gradient-to-r from-red-500 to-indigo-500 h-screen">
-        <div class="text-4xl text-center">
-          <div class="font-bold">Happy birthday,</div>
-          <div>{ targetName }!!</div>
+        <div class="flex items-center justify-center">
+          <div class="font-4xl">
+            <div class="font-bold">Happy birthday,</div>
+            <div>{ targetName }!!</div>
+          </div>       
         </div>
       </div>
       <div class="fixed bottom-0 w-screen">
