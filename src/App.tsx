@@ -14,7 +14,9 @@ function App() {
   const onClick = () => {
     alert('x')
     setBalloons([...balloons(), {
-      color: '#f00'
+      color: '#f00',
+      x: 0,
+      y: 0
     }])
   }
   const loop = () => {
@@ -32,7 +34,7 @@ function App() {
         <For each={balloons()}>{(balloon) => 
           <div class="fixed" style={{
             'top': balloon.y,
-            'left': ballon.x,
+            'left': balloon.x,
           }}>
             s
           </div>
