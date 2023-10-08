@@ -28,7 +28,7 @@ function App() {
         <For each={balloons()}>
           {
             (balloon) => {
-              return <div>{ balloon.color }</div>
+              return <div>{ balloon().color }</div>
             }
           }
         </For>
