@@ -25,13 +25,9 @@ function App() {
   return (
     <div>
       <div>
-        <For each={balloons()}>
-          {
-            (balloon) => {
-              return <div>{ balloon().color }</div>
-            }
-          }
-        </For>
+        <For each={balloons()}>{(balloon) => 
+          <div>x</div>    
+        }</For>
       </div>
       <div class="bg-gradient-to-r from-red-500 to-indigo-500 w-screen h-screen">
         <div class="flex items-center justify-center w-screen h-screen">
