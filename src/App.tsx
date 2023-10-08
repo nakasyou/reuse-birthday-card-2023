@@ -1,13 +1,38 @@
-import { createSignal } from 'solid-js'
+import { createSignal, For } from 'solid-js'
 
+interface Balloon {
+  x: number
+  y: number
+  color: string
+}
 function App() {
   const params = new URL(location.href).searchParams
 
   const targetName = params.get('name')
 
+  const [balloons, setBalloons] = createSignal<Balloon[]>([])
+  const onClick = () => {
+    setBalloons([...balloons, {
+      color: '#f00'
+    }])
+  }
+  const loop =  () => {
+    requestAnimationFlame(loop)
+  }
+  loop()
+  
   return (
     <div>
-      <div class="bg-gradient-to-r from-red-500 to-indigo-500 h-screen">
+      <div>
+        <For each={balloons}>
+          {
+            (balloon) => {
+              return <div>{ balloon.color }</div>
+            }
+          }
+        </For>
+      </div>
+      <div class="bg-gradient-to-r from-red-500 to-indigo-500 h-screen" onClick={onClick}>
         <div class="flex items-center justify-center w-screen h-screen">
           <div class="text-4xl text-center">
             <div class="font-bold">Happy birthday,</div>
