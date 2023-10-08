@@ -1,5 +1,4 @@
 import { createSignal } from 'solid-js'
-import './App.css'
 
 function App() {
   const params = new URL(location.href).searchParams
@@ -8,7 +7,10 @@ function App() {
 
   return (
     <div>
-      { targetName }
+      <div class="text-4xl">
+        <div>Happy birthday,</div>
+        <div>{ targetName }</div>
+      </div>
     </div>
   )
 }
