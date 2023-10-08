@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div>
-      <div class="text-4xl">
-        <div>Happy birthday,</div>
-        <div>{ targetName }</div>
+      <div class="text-4xl text-center">
+        <div class="font-bold">Happy birthday,</div>
+        <div>{ targetName }!!</div>
       </div>
     </div>
   )
