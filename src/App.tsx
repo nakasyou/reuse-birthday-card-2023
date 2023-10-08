@@ -12,6 +12,7 @@ function App() {
 
   const [balloons, setBalloons] = createSignal<Balloon[]>([])
   const onClick = () => {
+    alert('x')
     setBalloons([...balloons, {
       color: '#f00'
     }])
@@ -32,11 +33,12 @@ function App() {
           }
         </For>
       </div>
-      <div class="bg-gradient-to-r from-red-500 to-indigo-500 h-screen" onClick={onClick}>
+      <div class="bg-gradient-to-r from-red-500 to-indigo-500 w-screen h-screen">
         <div class="flex items-center justify-center w-screen h-screen">
           <div class="text-4xl text-center">
             <div class="font-bold">Happy birthday,</div>
             <div>{ targetName }!!</div>
+            <button onClick={onClick}>Button</button>
           </div>       
         </div>
       </div>
