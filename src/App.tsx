@@ -13,7 +13,7 @@ function App() {
   const [balloons, setBalloons] = createSignal<Balloon[]>([])
   const onClick = () => {
     alert('x')
-    setBalloons([...balloons, {
+    setBalloons([...balloons(), {
       color: '#f00'
     }])
   }
