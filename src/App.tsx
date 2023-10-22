@@ -49,6 +49,7 @@ function App() {
           <div class="fixed" style={{
             'top': balloon.y + 'vh',
             'left': balloon.x + 'vw',
+            'z-index': Math.floor((balloon.vy - 0.3) * 1000)
           }}>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width={71.90642 * balloon.vy * 2} height={145.82958 * balloon.vy * 2} viewBox="0,0,71.90642,145.82958">
               <g transform="translate(-204.04679,-139.53092)">
