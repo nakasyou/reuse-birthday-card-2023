@@ -16,7 +16,7 @@ function App() {
     setBalloons([...balloons(), {
       color: '#' + Math.random().toString(16).slice(2, 8),
       x: Math.random() * 100,
-      y: Math.random() * 100,
+      y: (Math.random() + 0.5) * 50,
       vy: Math.random()
     }])
   }
@@ -27,7 +27,7 @@ function App() {
       const removes: number[]= []
       const newBalloons = balloons().map((balloon, index) => {
         balloon.y -= balloon.vy
-        if (balloon.y < 0) {
+        if (balloon.y < -20) {
           removes.push(index)
         }
         return balloon
