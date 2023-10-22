@@ -17,9 +17,8 @@ function App() {
       x: 0,
       y: 20
     }])
-    alert(balloons())
   }
-  const loop = () => {
+  /*const loop = () => {
     try {
       setBalloons(balloons().map(balloon => {
         balloon.y += 10
@@ -30,16 +29,13 @@ function App() {
       alert(error)
     }
   }
-  loop()
+  loop()*/
   
   return (
     <div>
       <div>
         <For each={balloons()}>{(balloon) => 
-          <div class="fixed" style={{
-            'top': balloon.y + 'px',
-            'left': balloon.x + 'px',
-          }}>
+          <div>
             s
           </div>
         }</For>
