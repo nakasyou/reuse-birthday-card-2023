@@ -14,8 +14,8 @@ function App() {
   const onClick = () => {
     setBalloons([...balloons(), {
       color: '#f00',
-      x: 0,
-      y: 20
+      x: Math.random() * window.innerWidth,
+      y: window.innerHeight
     }])
   }
   /*const loop = () => {
