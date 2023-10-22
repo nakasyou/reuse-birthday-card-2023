@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <div>
-        <For each={balloons()}>{(balloon) => 
+        {balloons().map((balloon) => 
           <div class="fixed" style={{
             'top': balloon.y + 'vh',
             'left': balloon.x + 'vw',
@@ -51,7 +51,7 @@ function App() {
               </g>
             </svg>
           </div>
-        }</For>
+        )}
       </div>
       <div class="bg-gradient-to-r from-red-500 to-indigo-500 w-screen h-screen">
         <div class="flex items-center justify-center w-screen h-screen">
