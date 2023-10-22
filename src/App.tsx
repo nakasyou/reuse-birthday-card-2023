@@ -23,11 +23,10 @@ function App() {
   const loop = () => {
     try {
       setBalloons(balloons().map(balloon => {
-        balloon.y += 10
+        balloon.y -= balloon.vy
         return balloon
       }))
-      alert(JSON.stringify(balloons()))
-      setTimeout(loop, 1000)
+      requestAnimationFrame(loop)
     } catch (error) {
       alert(error)
     }
