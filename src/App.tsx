@@ -26,6 +26,7 @@ function App() {
         balloon.y += 10
         return balloon
       }))
+      alert(JSON.stringify(balloons()))
       requestAnimationFrame(loop)
     } catch (error) {
       alert(error)
