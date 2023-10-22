@@ -38,7 +38,6 @@ function App() {
           <div class="fixed" style={{
             'top': balloon.y + 'vh',
             'left': balloon.x + 'vw',
-            'backgroundColor': '
           }}>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71.90642" height="145.82958" viewBox="0,0,71.90642,145.82958">
               <g transform="translate(-204.04679,-139.53092)">
