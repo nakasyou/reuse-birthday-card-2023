@@ -21,6 +21,7 @@ function App() {
     }])
   }
   window.addEventListener('click', onClick)
+  window.addEventListener('pointermove', onClick)
   const loop = () => {
     try {
       const removes: number[]= []
