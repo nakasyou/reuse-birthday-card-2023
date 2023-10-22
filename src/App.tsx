@@ -20,6 +20,7 @@ function App() {
       vy: Math.random()
     }])
   }
+  window.addEventListener('click', onClick)
   const loop = () => {
     try {
       setBalloons(balloons().map(balloon => {
