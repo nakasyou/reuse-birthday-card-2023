@@ -35,7 +35,10 @@ function App() {
     <div>
       <div>
         <For each={balloons()}>{(balloon) => 
-          <div>
+          <div class="fixed" style={{
+            'top': balloon.y + 'px',
+            'left': balloon.x + 'px',
+          }}>
             s
           </div>
         }</For>
