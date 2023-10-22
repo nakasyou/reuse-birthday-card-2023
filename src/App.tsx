@@ -42,7 +42,7 @@ function App() {
             'top': balloon.y + 'vh',
             'left': balloon.x + 'vw',
           }}>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width={71.90642 * balloon.vy} height={145.82958 * balloon.vy} viewBox="0,0,71.90642,145.82958">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width={71.90642 * balloon.vy * 2} height={145.82958 * balloon.vy * 2} viewBox="0,0,71.90642,145.82958">
               <g transform="translate(-204.04679,-139.53092)">
                 <g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill={balloon.color} fill-rule="nonzero" stroke="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal">
                   <path d="M275.95321,180c0,22.35045 -16.0968,40.46908 -35.95321,40.46908c-19.85641,0 -35.95321,-18.11863 -35.95321,-40.46908c0,-22.35045 16.0968,-40.46908 35.95321,-40.46908c19.85641,0 35.95321,18.11863 35.95321,40.46908z" stroke-width="0" />
