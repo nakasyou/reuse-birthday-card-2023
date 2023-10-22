@@ -27,7 +27,7 @@ function App() {
         return balloon
       }))
       alert(JSON.stringify(balloons()))
-      requestAnimationFrame(loop)
+      setTimeout(loop, 1000)
     } catch (error) {
       alert(error)
     }
