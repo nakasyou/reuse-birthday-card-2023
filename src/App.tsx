@@ -4,6 +4,7 @@ interface Balloon {
   x: number
   y: number
   color: string
+  vy: number
 }
 function App() {
   const params = new URL(location.href).searchParams
@@ -15,10 +16,11 @@ function App() {
     setBalloons([...balloons(), {
       color: '#f00',
       x: Math.random() * 100,
-      y: Math.random() * 100
+      y: Math.random() * 100,
+      vy: Math.random()
     }])
   }
-  /*const loop = () => {
+  const loop = () => {
     try {
       setBalloons(balloons().map(balloon => {
         balloon.y += 10
@@ -29,7 +31,7 @@ function App() {
       alert(error)
     }
   }
-  loop()*/
+  loop()
   
   return (
     <div>
