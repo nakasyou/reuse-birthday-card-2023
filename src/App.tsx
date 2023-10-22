@@ -23,10 +23,18 @@ function App() {
   window.addEventListener('click', onClick)
   const loop = () => {
     try {
-      setBalloons(balloons().map(balloon => {
+      const removes: number[]= []
+      const newBalloons = balloons().map((balloon, index) => {
         balloon.y -= balloon.vy
+        if (balloon.y < 0) {
+          removes.push(index)
+        }
         return balloon
-      }))
+      })
+      for (const removeIndex of removes) {
+        newBalloons.splice(removeIndex, 1)
+      }
+      setBalloons(newBalloons)
       requestAnimationFrame(loop)
     } catch (error) {
       alert(error)
