@@ -10,7 +10,8 @@ function App() {
   const params = new URL(location.href).searchParams
 
   const targetName = params.get('name')
-
+  const message = params.get('message')
+  
   const [balloons, setBalloons] = createSignal<Balloon[]>([])
   const onClick = () => {
     setBalloons([...balloons(), {
@@ -68,6 +69,9 @@ function App() {
           <div class="text-4xl text-center">
             <div class="font-bold">Happy birthday,</div>
             <div>{ targetName }!!</div>
+            <div class="text-base">
+              { message }
+            </div>
             <button class="text-2xl">Tap screen to Fly Balloons!!</button>
           </div>       
         </div>
